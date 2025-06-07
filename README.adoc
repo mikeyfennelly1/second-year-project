@@ -1,1 +1,42 @@
-second-year-project
+= second-year-project
+:toc:
+
+== Overview
+
+This project is a basic security project for getting hands on with encryption and cybersecurity in general over the network.
+
+== Components
+
+=== Preface
+
+- All cryptographic components must provide a minimum of 128 bits of effective security against cryptographic attacks.
+- Must use reputable libraries like OpenSSL/libsodium/the Web Crypto API.
+- Avoid deprecated algorithms.
+
+=== A client application
+- Encrypts files with a modern authenticated encryption scheme like AES or ChaCha20.
+- Encrypts each file with a fresh encryption key.
+- Securely generates/stores/deletes the keys.
+
+[NOTE]
+Knowledge of how to decrypt one file shouldn't allow a bad actor to decrypt another file.
+
+=== A server application
+- Creates connections with clients over SSL/TLS.
+- Must be able to verify the user's identity.
+- Must send back the files in a way that the user can verify that the data has not been tampered with.
+- Changes to inbound data in transit / at rest must be checked.
+
+==== Interaction with database and password/key management
+
+- Passwords used for authentication should be encrypted. (NIST SP800-63B)
+- Users should be able to change their password without losing access to their encrypted files.
+- Authentication creds different from encryption credentials.
+- Derive keys appropriately.
+- Nonces and IVs must be generated securely and used appropriately in accordance with cryptographic best practices.
+
+=== Connections between the client and server
+
+- End-to-end encrypted.
+- Should be protected by SSL/TLS.
+- Must have a mechanism to ensure that an adversary can not modify ciphertexts or associated metadata (i.e. hash, encrypt and sign, then validate on client side).
