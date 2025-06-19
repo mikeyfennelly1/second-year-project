@@ -1,0 +1,30 @@
+name: Build and Server application
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Install dependencies
+        run: |
+          export PWD=$(pwd)
+          sudo apt-get install libgtest-dev                                                                            
+          sudo apt-get install cmake
+          cd /usr/src/gtest
+          sudo cmake .
+          sudo make
+          sudo cp *.a /usr/lib
+          cd PWD
+
+      - name: Build
+        run: |
+          make
+        continue-on-error: false # fail workflow if unsuccessful build
