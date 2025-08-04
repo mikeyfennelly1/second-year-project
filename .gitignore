@@ -1,2 +1,5 @@
 /build
 /.idea
+cmake_install.cmake
+/CMakeFiles
+CMakeCache.txt

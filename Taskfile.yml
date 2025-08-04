@@ -1,0 +1,26 @@
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  default:
+    desc: List the available task commands.
+    cmds:
+      - task --list-all
+    silent: true
+
+  build:
+    desc: Build objects & executables from sources.
+    cmds:
+      - cmake .                     # generate build files
+      - cmake --build .             # build project
+
+  test:
+    desc: Run program tests
+    cmds:
+      - task build
+      -
+
+  docs:
+    desc: Generate documentation for source code
