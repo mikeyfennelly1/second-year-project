@@ -1,7 +1,7 @@
 version: '3'
 
 vars:
-  GREETING: Hello, World!
+  BINARY: ./bin/second-year-project
 
 tasks:
   default:
@@ -15,12 +15,25 @@ tasks:
     cmds:
       - cmake .                     # generate build files
       - cmake --build .             # build project
+      - mkdir -p bin
+      - mv ./second-year-project {{.BINARY}}
 
   test:
     desc: Run program tests
     cmds:
       - task build
-      -
+
+  run:
+    desc: Build and run the project
+    cmds:
+      - task build
+      - "{{.BINARY}}"
+
+  clean:
+    desc: Remove generated build outputs
+    cmds:
+      - rm -rf ./build
+      - rm -rf ./bin
 
   docs:
     desc: Generate documentation for source code

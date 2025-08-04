@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MyApp
+# Target rules for targets named second-year-project
 
 # Build rule for target.
-MyApp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyApp
-.PHONY : MyApp
+second-year-project: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 second-year-project
+.PHONY : second-year-project
 
 # fast build rule for target.
-MyApp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/build
-.PHONY : MyApp/fast
+second-year-project/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/second-year-project.dir/build.make CMakeFiles/second-year-project.dir/build
+.PHONY : second-year-project/fast
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/second-year-project.dir/build.make CMakeFiles/second-year-project.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -142,7 +142,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/second-year-project.dir/build.make CMakeFiles/second-year-project.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -150,7 +150,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/second-year-project.dir/build.make CMakeFiles/second-year-project.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... MyApp"
+	@echo "... second-year-project"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
