@@ -37,3 +37,6 @@ tasks:
 
   docs:
     desc: Generate documentation for source code
+    cmds:
+      - doxygen Doxyfile
+      - google-chrome ./html/index.html

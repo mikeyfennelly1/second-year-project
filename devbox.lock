@@ -57,6 +57,70 @@
         }
       }
     },
+    "doxygen@latest": {
+      "last_modified": "2025-07-13T22:45:35Z",
+      "resolved": "github:NixOS/nixpkgs/a421ac6595024edcfbb1ef950a3712b89161c359#doxygen",
+      "source": "devbox-search",
+      "version": "1.14.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/92hk6qdm4pcwx9a42gkxggixqqlplz44-doxygen-1.14.0",
+              "default": true
+            },
+            {
+              "name": "examples",
+              "path": "/nix/store/szmckv699bwy5y66ssbbx38gz6gp5y52-doxygen-1.14.0-examples"
+            }
+          ],
+          "store_path": "/nix/store/92hk6qdm4pcwx9a42gkxggixqqlplz44-doxygen-1.14.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/i6j44xaz17li9dv1619rcr4w4g0qvn9y-doxygen-1.14.0",
+              "default": true
+            },
+            {
+              "name": "examples",
+              "path": "/nix/store/i80j5gphyjpapr50jq28ifasmrr13gzl-doxygen-1.14.0-examples"
+            }
+          ],
+          "store_path": "/nix/store/i6j44xaz17li9dv1619rcr4w4g0qvn9y-doxygen-1.14.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/pwj8pkk3h944sm0pfdz2q13mjyv04mx4-doxygen-1.14.0",
+              "default": true
+            },
+            {
+              "name": "examples",
+              "path": "/nix/store/h97vh17j3aqvbv9piqwgavd79p3haa35-doxygen-1.14.0-examples"
+            }
+          ],
+          "store_path": "/nix/store/pwj8pkk3h944sm0pfdz2q13mjyv04mx4-doxygen-1.14.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/w9qqmjfrsbwzm9iwal5pr15gaswgibx7-doxygen-1.14.0",
+              "default": true
+            },
+            {
+              "name": "examples",
+              "path": "/nix/store/21bgbl5bvfncjrn4h92hry8l44dsjqvl-doxygen-1.14.0-examples"
+            }
+          ],
+          "store_path": "/nix/store/w9qqmjfrsbwzm9iwal5pr15gaswgibx7-doxygen-1.14.0"
+        }
+      }
+    },
     "github:NixOS/nixpkgs/nixpkgs-unstable": {
       "last_modified": "2025-07-07T01:36:15Z",
       "resolved": "github:NixOS/nixpkgs/2defa37146df235ef62f566cde69930a86f14df1?lastModified=1751852175&narHash=sha256-%2BMLlfTCCOvz4K6AcSPbaPiFM9MYi7fA2Wr1ibmRwIlM%3D"
